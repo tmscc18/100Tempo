@@ -23,7 +23,7 @@ def menu():
     lista_de_trotinetas = []
     lista_de_utilizadores = []
     lista_de_compras = []
-
+# boas
     while True:
         print("""
         *********************************************************************
