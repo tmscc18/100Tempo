@@ -1,3 +1,5 @@
+# tiago bota
+
 from trotinetas import (
     cria_trotineta,
     imprime_lista_de_trotinetas,
@@ -18,7 +20,6 @@ from io_terminal import (
 import time
 
 # teste 3
-
 def menu():
     """ main menu da aplicação"""
 
