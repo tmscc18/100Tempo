@@ -17,6 +17,7 @@ from io_terminal import (
 )
 import time
 
+# TESTE
 
 def menu():
     """ main menu da aplicação"""
