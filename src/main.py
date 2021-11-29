@@ -1,4 +1,3 @@
-# tiago CAstro
 
 from trotinetas import (
     cria_trotineta,
