@@ -30,7 +30,7 @@ def menu():
         :       A trote - aluguer de trotinetas                             : 
         *********************************************************************
         :                                                                   :
-        : tn - nova trotinera       tl - lista veiculos                     :
+        : tn - nova trotineta       tl - lista veiculos                     :
         : un - novo utilizador      ul - lista utilizadores                 :
         : an - novo aluguer         al - lista aluguers                     :
         : ...                                                               :
