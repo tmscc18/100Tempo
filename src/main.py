@@ -1,5 +1,3 @@
-# tiago CAstro
-
 from trotinetas import (
     cria_trotineta,
     imprime_lista_de_trotinetas,
@@ -18,7 +16,6 @@ from io_terminal import (
     imprime_lista_de_dicionarios
 )
 import time
-
 
 def menu():
     """ main menu da aplicação"""
