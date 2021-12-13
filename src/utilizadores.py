@@ -9,11 +9,12 @@ def cria_novo_utilizador():
     """
 
     name = input("Introduza o seu nome: ")
-    NIF = input("Introduza o seu contribuinte: ")
-    phone = input("Introduza o seu telemóvel: ")
+    NIF = int(input("Introduza o seu contribuinte: "))
+    phone = int(input("Introduza o seu telemóvel: "))
     email = input("Introduza o seu email: ")
     password = input("Introduza a sua password: ")
 
+    return {"name": marca, "NIF": modelo, "phone": phone, "email": email, "password": password}
     # todo
     pass
 
