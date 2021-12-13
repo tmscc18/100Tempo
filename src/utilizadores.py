@@ -7,6 +7,13 @@ def cria_novo_utilizador():
 
     :return: dicionario com o novo utilizador, {"nome": <<nome>>, "email": <<email>>}
     """
+
+    name = input("Introduza o seu nome: ")
+    NIF = input("Introduza o seu contribuinte: ")
+    phone = input("Introduza o seu telemóvel: ")
+    email = input("Introduza o seu email: ")
+    password = input("Introduza a sua password: ")
+
     # todo
     pass
 
