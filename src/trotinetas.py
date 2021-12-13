@@ -12,6 +12,7 @@ def cria_trotineta():
 
     marca = input("marca? ")
     modelo = input("modelo? ").upper()
+    print("Bateria: 10 KM ´single charge´")
     return {"marca": marca, "matricula": modelo}
 
 
@@ -19,3 +20,4 @@ def imprime_lista_de_trotinetas(lista_de_veiculos):
     """ ..."""
 
     imprime_lista(cabecalho="Lista de Veiculos", lista=lista_de_veiculos)
+

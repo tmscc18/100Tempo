@@ -25,6 +25,7 @@ def menu():
     lista_de_trotinetas = []
     lista_de_utilizadores = []
     lista_de_compras = []
+    lista_de_aluguer = []
 
     while True:
         print("""
@@ -72,9 +73,6 @@ def menu():
                 print("Erro: tem de ter utilizadores e trotinetas")
         elif op == "al":
             pass
-            # todo
-            # imprime_lista_de_compras()
-
 
 def pergunta_id(questao, lista):
     """ ... ??to do??
