@@ -15,8 +15,6 @@ def cria_novo_utilizador():
     password = input("Introduza a sua password: ")
 
     return {"name": name, "NIF": NIF, "phone": phone, "email": email, "password": password}
-    # todo
-    pass
 
 
 def imprime_lista_de_utilizadores(lista_de_utilizadores):
