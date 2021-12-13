@@ -14,7 +14,7 @@ def cria_novo_utilizador():
     email = input("Introduza o seu email: ")
     password = input("Introduza a sua password: ")
 
-    return {"name": marca, "NIF": modelo, "phone": phone, "email": email, "password": password}
+    return {"name": name, "NIF": NIF, "phone": phone, "email": email, "password": password}
     # todo
     pass
 
