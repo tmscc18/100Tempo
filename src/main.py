@@ -13,6 +13,11 @@ from io_ficheiros import (
     guarda_em_ficheiro,
     le_de_ficheiro
 )
+
+from aluguer import (
+    imprime_lista_de_aluguer
+)
+
 from io_terminal import (
     imprime_lista_de_dicionarios
 )
@@ -72,8 +77,8 @@ def menu():
             else:
                 print("Erro: tem de ter utilizadores e trotinetas")
         elif op == "al":
-            # imprime_lista(cabecalho="Lista de Alugueres", lista=lista_de_aluguer)
-            pass
+            imprime_lista_de_aluguer(lista_de_aluguer)
+
 
 
 def pergunta_id(questao, lista):
