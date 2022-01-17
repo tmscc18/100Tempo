@@ -35,7 +35,7 @@ def menu():
         : tn - nova trotinera       tl - lista veiculos                     :
         : un - novo utilizador      ul - lista utilizadores                 :
         : an - novo aluguer         al - lista aluguers                     :
-        : ...                                                               :
+        : tb - area de do utilizador                                                              :
         : ...                                                               :
         : ...                                                               :
         : g - guarda tudo           c - carrega tudo                        :
@@ -64,7 +64,8 @@ def menu():
         elif op == "c":
             lista_de_trotinetas, lista_de_utilizadores = carrega_as_listas_dos_ficheiros()
         elif op == "an":
-            if lista_de_utilizadores and lista_de_trotinetas:
+            if lista_de_utilizadores and lista_de_trotinetatl
+                s:
                 id_comprador = pergunta_id(questao="Qual o id do comprador?", lista=lista_de_utilizadores)
                 id_veiculo = pergunta_id(questao="Qual o id do veiculo?", lista=lista_de_trotinetas)
                 lista_de_compras.append([id_comprador, id_veiculo, time.time()])
@@ -74,6 +75,9 @@ def menu():
             pass
             # todo
             # imprime_lista_de_compras()
+        #elif op == "tb":
+            #redireciona para pasta area clente
+
 
 
 def pergunta_id(questao, lista):
