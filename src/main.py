@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> dev
 from trotinetas import (
     cria_trotineta,
     imprime_lista_de_trotinetas,
