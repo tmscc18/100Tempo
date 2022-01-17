@@ -18,6 +18,9 @@ def cria_trotineta():
 
 def imprime_lista_de_trotinetas(lista_de_veiculos):
     """ ..."""
-
-    imprime_lista(cabecalho="Lista de Veiculos", lista=lista_de_veiculos)
+    try:
+        imprime_lista(cabecalho="Lista de Veiculos", lista=lista_de_veiculos)
+    except TypeError:
+        print("Ficheiro vazio")
+        pass
 

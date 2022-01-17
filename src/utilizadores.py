@@ -16,5 +16,8 @@ def cria_novo_utilizador():
 
 def imprime_lista_de_utilizadores(lista_de_utilizadores):
     """ ..."""
-
-    imprime_lista(cabecalho="Lista de Utilizadores", lista=lista_de_utilizadores)
+    try:
+        imprime_lista(cabecalho="Lista de Utilizadores", lista=lista_de_utilizadores)
+    except TypeError:
+        print("Ficheiro vazio")
+        pass
