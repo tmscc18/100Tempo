@@ -8,16 +8,18 @@ def cria_novo_utilizador():
     :return: dicionario com o novo utilizador, {"nome": <<nome>>, "email": <<email>>}
     """
 
-    name = input("Introduza o seu nome: ")
-    NIF = int(input("Introduza o seu contribuinte: "))
-    phone = int(input("Introduza o seu telemóvel: "))
-    email = input("Introduza o seu email: ")
-    password = input("Introduza a sua password: ")
+    nome = input("Nome? ")
+    email = input("Email? ")
+    telemovel = input("Telemovel? ")
+    password = input("Password? ")
+    return {"nome": nome, "email": email, "telemovel": telemovel, "password": password}
 
-    return {"name": name, "NIF": NIF, "phone": phone, "email": email, "password": password}
 
 
 def imprime_lista_de_utilizadores(lista_de_utilizadores):
     """ ..."""
-
-    imprime_lista(cabecalho="Lista de Utilizadores", lista=lista_de_utilizadores)
+    try:
+        imprime_lista(cabecalho="Lista de Utilizadores", lista=lista_de_utilizadores)
+    except TypeError:
+        print("Ficheiro vazio")
+        pass
