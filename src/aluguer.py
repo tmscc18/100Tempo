@@ -3,7 +3,7 @@ from datetime import datetime  # para obter data e hora atual
 
 from io_terminal import imprime_lista
 
-# nome_ficheiro_lista_de_trotinetas = "lista_de_aluguer.pk" # Criar novo ficheiro lista_de_aluguer.pk
+nome_ficheiro_lista_de_aluguer = "lista_de_aluguer.pk"
 
 
 def cria_aluguer():

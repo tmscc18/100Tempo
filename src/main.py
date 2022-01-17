@@ -15,7 +15,10 @@ from io_ficheiros import (
 )
 
 from aluguer import (
-    imprime_lista_de_aluguer
+    cria_aluguer,
+    imprime_lista_de_aluguer,
+    nome_ficheiro_lista_de_aluguer
+
 )
 
 from io_terminal import (
@@ -66,13 +69,15 @@ def menu():
         elif op == "ul":
             imprime_lista_de_utilizadores(lista_de_utilizadores)
         elif op == "g":
-            guarda_as_listas_em_ficheiros(lista_de_trotinetas, lista_de_utilizadores)
+            guarda_as_listas_em_ficheiros(lista_de_trotinetas, lista_de_utilizadores, lista_de_aluguer)
         elif op == "c":
-            lista_de_trotinetas, lista_de_utilizadores = carrega_as_listas_dos_ficheiros()
+            lista_de_trotinetas, lista_de_utilizadores, lista_de_aluguer = carrega_as_listas_dos_ficheiros()
         elif op == "an":
             if lista_de_utilizadores and lista_de_trotinetas:
                 id_comprador = pergunta_id(questao="Qual o id do comprador?", lista=lista_de_utilizadores)
                 id_veiculo = pergunta_id(questao="Qual o id do veiculo?", lista=lista_de_trotinetas)
+                novo_aluguer = cria_aluguer()
+                lista_de_aluguer.append(novo_aluguer)
                 lista_de_compras.append([id_comprador, id_veiculo, time.time()])
             else:
                 print("Erro: tem de ter utilizadores e trotinetas")
@@ -103,10 +108,11 @@ def carrega_as_listas_dos_ficheiros():
 
     lista_de_veiculos = le_de_ficheiro(nome_ficheiro_lista_de_trotinetas)
     lista_de_utilizadores = le_de_ficheiro(nome_ficheiro_lista_de_utilizadores)
-    return lista_de_veiculos, lista_de_utilizadores
+    lista_de_aluguer = le_de_ficheiro(nome_ficheiro_lista_de_aluguer)
+    return lista_de_veiculos, lista_de_utilizadores, lista_de_aluguer
 
 
-def guarda_as_listas_em_ficheiros(lista_de_veiculos, lista_de_utilizadores):
+def guarda_as_listas_em_ficheiros(lista_de_veiculos, lista_de_utilizadores, lista_de_aluguer):
     """ ... todo ....
 
     :param lista_de_utilizadores:
@@ -118,6 +124,7 @@ def guarda_as_listas_em_ficheiros(lista_de_veiculos, lista_de_utilizadores):
     if op in ['s', 'S', '']:
         guarda_em_ficheiro(nome_ficheiro_lista_de_trotinetas, lista_de_veiculos)
         guarda_em_ficheiro(nome_ficheiro_lista_de_utilizadores, lista_de_utilizadores)
+        guarda_em_ficheiro(nome_ficheiro_lista_de_aluguer, lista_de_aluguer)
     else:
         print("Cancelada.")
 
