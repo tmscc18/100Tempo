@@ -40,7 +40,6 @@ def menu():
         : tn - nova trotinera       tl - lista veiculos                     :
         : un - novo utilizador      ul - lista utilizadores                 :
         : an - novo aluguer         al - lista aluguers                     :
-        : tb - area de do utilizador                                        :
         : ...                                                               :
         : ...                                                               :
         : g - guarda tudo           c - carrega tudo                        :
