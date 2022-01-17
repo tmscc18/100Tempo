@@ -29,4 +29,3 @@ def imprime_lista_de_aluguer(lista_de_aluguer):
     """ ..."""
 
     imprime_lista(cabecalho="Lista de Alugueres", lista=lista_de_aluguer)
-
