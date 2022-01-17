@@ -72,7 +72,9 @@ def menu():
             else:
                 print("Erro: tem de ter utilizadores e trotinetas")
         elif op == "al":
+            # imprime_lista(cabecalho="Lista de Alugueres", lista=lista_de_aluguer)
             pass
+
 
 def pergunta_id(questao, lista):
     """ ... ??to do??
