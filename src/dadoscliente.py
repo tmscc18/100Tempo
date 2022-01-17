@@ -1,5 +1,5 @@
 # area para listar todos os dados do utilizador
-from utilizadores import ()
+from utilizadores import *
 #selecionar o utilizador
 
 

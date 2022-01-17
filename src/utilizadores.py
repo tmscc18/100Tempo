@@ -7,8 +7,11 @@ def cria_novo_utilizador():
 
     :return: dicionario com o novo utilizador, {"nome": <<nome>>, "email": <<email>>}
     """
-    # todo
-    pass
+    nome = input("Nome? ")
+    email = input("Email? ")
+    telemovel = input("Telemovel? ")
+    password = input("Password? ")
+    return {"nome": nome, "email": email, "telemovel": telemovel, "password": password}
 
 
 def imprime_lista_de_utilizadores(lista_de_utilizadores):
