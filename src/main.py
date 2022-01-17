@@ -13,19 +13,15 @@ from io_ficheiros import (
     guarda_em_ficheiro,
     le_de_ficheiro
 )
-
 from aluguer import (
     cria_aluguer,
     imprime_lista_de_aluguer,
     nome_ficheiro_lista_de_aluguer
-
 )
-
 from io_terminal import (
     imprime_lista_de_dicionarios
 )
 import time
-
 
 def menu():
     """ main menu da aplicação"""
