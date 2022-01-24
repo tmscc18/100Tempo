@@ -18,6 +18,13 @@ from aluguer import (
     imprime_lista_de_aluguer,
     nome_ficheiro_lista_de_aluguer
 )
+
+from report import (
+    cria_report,
+    imprime_lista_de_report,
+    nome_ficheiro_lista_de_report
+)
+
 from io_terminal import (
     imprime_lista_de_dicionarios
 )
@@ -30,17 +37,19 @@ def menu():
     lista_de_utilizadores = []
     lista_de_compras = []
     lista_de_aluguer = []
+    lista_de_report = []
 
     while True:
         print("""
         *********************************************************************
-        :       A trote - aluguer de trotinetas                             : 
+        :                   A trote - aluguer de trotinetas                 : 
         *********************************************************************
         :                                                                   :
         : tn - nova trotinera       tl - lista veiculos                     :
         : un - novo utilizador      ul - lista utilizadores                 :
         : an - novo aluguer         al - lista aluguers                     :
-        : ...                                                               :
+        :                                                                   :
+        : rp - novo reporte         rl - lista reportes                     :
         : ...                                                               :
         : g - guarda tudo           c - carrega tudo                        :
         :                                                                   :
@@ -49,7 +58,7 @@ def menu():
         *********************************************************************
         """)
 
-        op = input("opcao?").lower()
+        op = input("opcao? -> ").lower()
 
         if op == "x":
             exit()
@@ -64,9 +73,9 @@ def menu():
         elif op == "ul":
             imprime_lista_de_utilizadores(lista_de_utilizadores)
         elif op == "g":
-            guarda_as_listas_em_ficheiros(lista_de_trotinetas, lista_de_utilizadores, lista_de_aluguer)
+            guarda_as_listas_em_ficheiros(lista_de_trotinetas, lista_de_utilizadores, lista_de_aluguer, lista_de_report)
         elif op == "c":
-            lista_de_trotinetas, lista_de_utilizadores, lista_de_aluguer = carrega_as_listas_dos_ficheiros()
+            lista_de_trotinetas, lista_de_utilizadores, lista_de_aluguer, lista_de_report = carrega_as_listas_dos_ficheiros()
         elif op == "an":
             if lista_de_utilizadores and lista_de_trotinetas:
                 id_comprador = pergunta_id(questao="Qual o id do comprador?", lista=lista_de_utilizadores)
@@ -79,24 +88,45 @@ def menu():
         elif op == "al":
             imprime_lista_de_aluguer(lista_de_aluguer)
 
+        elif op == "rp":
+            if lista_de_utilizadores:
+                id_comprador = pergunta_id(questao="Qual o seu id de cliente?", lista=lista_de_utilizadores, show=0)
+                novo_report = cria_report(id_comprador)
+                lista_de_report.append(novo_report)
+            else:
+                print("Erro: tem de ter utilizadores")
 
 
-def pergunta_id(questao, lista):
+
+
+        elif op == "rl":
+            imprime_lista_de_report(lista_de_report)
+
+
+
+def pergunta_id(questao, lista, show=1):
     """ ... ??to do??
 
     :param questao:
     :param lista:
     :return:
     """
-
-    imprime_lista_de_dicionarios(lista)
-    while True:
-        idx = int(input(questao))
-        if 0 <= idx < len(lista):
-            return idx
-        else:
-            print(f"id inexistente. Tente de novo. Valores admitidos {0} - {len(lista)}")
-
+    if show == 1:
+        imprime_lista_de_dicionarios(lista)
+        while True:
+            idx = int(input(questao))
+            if 0 <= idx < len(lista):
+                return idx
+            else:
+                print(f"id inexistente. Tente de novo. Valores admitidos {0} - {len(lista)}")
+    elif show == 0:
+        # foi removida a opção de mostrar a lista, para nao mostrar as passwords e infromações de outros clientes
+        while True:
+            idx = int(input(questao))
+            if 0 <= idx < len(lista):
+                return idx
+            else:
+                print(f"id inexistente. Tente de novo. Valores admitidos {0} - {len(lista)}")
 
 def carrega_as_listas_dos_ficheiros():
     """ ...todo... """
@@ -104,10 +134,11 @@ def carrega_as_listas_dos_ficheiros():
     lista_de_veiculos = le_de_ficheiro(nome_ficheiro_lista_de_trotinetas)
     lista_de_utilizadores = le_de_ficheiro(nome_ficheiro_lista_de_utilizadores)
     lista_de_aluguer = le_de_ficheiro(nome_ficheiro_lista_de_aluguer)
-    return lista_de_veiculos, lista_de_utilizadores, lista_de_aluguer
+    lista_de_report = le_de_ficheiro(nome_ficheiro_lista_de_report)
+    return lista_de_veiculos, lista_de_utilizadores, lista_de_aluguer, lista_de_report
 
 
-def guarda_as_listas_em_ficheiros(lista_de_veiculos, lista_de_utilizadores, lista_de_aluguer):
+def guarda_as_listas_em_ficheiros(lista_de_veiculos, lista_de_utilizadores, lista_de_aluguer, lista_de_report):
     """ ... todo ....
 
     :param lista_de_utilizadores:
@@ -115,11 +146,12 @@ def guarda_as_listas_em_ficheiros(lista_de_veiculos, lista_de_utilizadores, list
     :return:
     """
 
-    op = input("Os dados nos ficheiros serão sobrepostos. Continuar (S/n)?")
+    op = input("Os dados nos ficheiros serão sobrepostos. Continuar (S/n)? ")
     if op in ['s', 'S', '']:
         guarda_em_ficheiro(nome_ficheiro_lista_de_trotinetas, lista_de_veiculos)
         guarda_em_ficheiro(nome_ficheiro_lista_de_utilizadores, lista_de_utilizadores)
         guarda_em_ficheiro(nome_ficheiro_lista_de_aluguer, lista_de_aluguer)
+        guarda_em_ficheiro(nome_ficheiro_lista_de_report, lista_de_report)
     else:
         print("Cancelada.")
 
