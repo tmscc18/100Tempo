@@ -7,12 +7,17 @@ def cria_novo_utilizador():
 
     :return: dicionario com o novo utilizador, {"nome": <<nome>>, "email": <<email>>}
     """
+    while True:
+        try:
+            nome = str(input("\nNome? "))
+            email = str(input("Email? "))
+            telemovel = int(input("Telemovel? "))
+            password = input("Password? ")
+            return {"nome": nome, "email": email, "telemovel": telemovel, "password": password}
 
-    nome = input("Nome? ")
-    email = input("Email? ")
-    telemovel = input("Telemovel? ")
-    password = input("Password? ")
-    return {"nome": nome, "email": email, "telemovel": telemovel, "password": password}
+        except (TypeError, ValueError):
+            print("\nValor inserido inálido. Use apenas digidos para o Telemóvel e letras para os outros campos\n")
+            continue
 
 
 

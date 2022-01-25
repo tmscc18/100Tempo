@@ -9,11 +9,17 @@ def cria_trotineta():
     :return: dicionario com uma trotineta na forma 
         {"marca": <<marca>>, "modelo": <<modelo>>, ... COMPLETAR ...}
     """
+    while True:
+        try:
+            marca = str(input("marca? "))
+            modelo = input("modelo? ").upper()
+            print("Bateria: 10 KM ´single charge´")
 
-    marca = input("marca? ")
-    modelo = input("modelo? ").upper()
-    print("Bateria: 10 KM ´single charge´")
-    return {"marca": marca, "matricula": modelo}
+            return {"marca": marca, "matricula": modelo}
+
+        except (TypeError, ValueError):
+            print("\nValor inserido inálido. Use apenas letras para a Marca\n")
+            continue
 
 
 def imprime_lista_de_trotinetas(lista_de_veiculos):
