@@ -22,8 +22,8 @@ def imprime_lista_de_report(lista_de_report):
     """
     :Obtem a lista guardada no ficheiro e imprime essa lista
     """
-     try:
-         imprime_lista(cabecalho="Lista de Reportes", lista=lista_de_report)
-     except TypeError:
-         print("Ficheiro vazio")
-         pass
+    try:
+        imprime_lista(cabecalho="Lista de Reportes", lista=lista_de_report)
+    except TypeError:
+        print("Ficheiro vazio")
+        pass
