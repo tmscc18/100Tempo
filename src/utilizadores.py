@@ -6,7 +6,11 @@ def cria_novo_utilizador():
     """
     Pede os dados de um novo utilizador
 
-    :return: dicionario com o novo utilizador, {"nome": nome, "email": email, "telemovel": telemovel, "password": password}
+    :return: dicionario com o novo utilizador, \
+    {"nome": nome, \
+    "email": email, \
+    "telemovel": telemovel, \
+    "password": password}
     """
     while True:
         try:
@@ -20,11 +24,10 @@ def cria_novo_utilizador():
             print("\nValor inserido inálido. Use apenas digidos para o Telemóvel e letras para os outros campos\n")
             continue
 
-
-
 def imprime_lista_de_utilizadores(lista_de_utilizadores):
     """
-    :Obtem a lista guardada no ficheiro e imprime essa lista
+    Obtem a lista guardada no ficheiro e imprime essa lista
+
     :return:
     :param lista_de_utilizadores:
     """

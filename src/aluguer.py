@@ -5,8 +5,14 @@ nome_ficheiro_lista_de_aluguer = "lista_de_aluguer.pk"
 
 def cria_aluguer():
     """ 
-    Pede ao utilizador para introduzir um novo aluguer mas tem que haver obrigatoriamente uma trotinete e um utilizador antes criado
-    :return: dicionario com uma trotineta na forma, {"nif": nif_cliente, "serie_trotinete": num_serie_troti, "data_hora": hora_data, "estado": estado_troti}
+    Pede ao utilizador para introduzir um novo aluguer mas tem que haver 
+    obrigatoriamente uma trotinete e um utilizador antes criado
+
+    :return: dicionario com uma trotineta na forma, \
+    {"nif": nif_cliente, \
+    "serie_trotinete": num_serie_troti, \
+    "data_hora": hora_data, \
+    "estado": estado_troti}
     """
     while True:
         try:
@@ -33,11 +39,13 @@ def cria_aluguer():
 
 def imprime_lista_de_aluguer(lista_de_aluguer):
     """
-    :Obtem a lista guardada no ficheiro e imprime essa lista
+    Obtem a lista guardada no ficheiro e imprime essa lista
+    
+    :return:
+    :param lista_de_utilizadores:
     """
     try:
         imprime_lista(cabecalho="Lista de Alugueres", lista=lista_de_aluguer)
     except TypeError:
         print("Ficheiro vazio")
         pass
-

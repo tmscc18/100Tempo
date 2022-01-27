@@ -174,11 +174,12 @@
 
 <span class="n">nome_ficheiro_lista_de_trotinetas</span> <span class="o">=</span> <span class="s2">&quot;lista_de_trotinetas.pk&quot;</span>
 
-
 <div class="viewcode-block" id="cria_trotineta"><a class="viewcode-back" href="../trotinetas.html#trotinetas.cria_trotineta">[docs]</a><span class="k">def</span> <span class="nf">cria_trotineta</span><span class="p">():</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Pede ao utilizador para introduzir uma nova trotineta</span>
-<span class="sd">    :return: dicionario com uma trotineta na forma, {&quot;marca&quot;: marca, &quot;matricula&quot;: modelo}</span>
+<span class="sd">    :return: dicionario com uma trotineta na forma, \</span>
+<span class="sd">    {&quot;marca&quot;: marca, \</span>
+<span class="sd">    &quot;matricula&quot;: modelo}</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
         <span class="k">try</span><span class="p">:</span>
@@ -195,14 +196,16 @@
 
 <div class="viewcode-block" id="imprime_lista_de_trotinetas"><a class="viewcode-back" href="../trotinetas.html#trotinetas.imprime_lista_de_trotinetas">[docs]</a><span class="k">def</span> <span class="nf">imprime_lista_de_trotinetas</span><span class="p">(</span><span class="n">lista_de_veiculos</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    :Obtem a lista guardada no ficheiro e imprime essa lista</span>
+<span class="sd">    Obtem a lista guardada no ficheiro e imprime essa lista</span>
+<span class="sd">    </span>
+<span class="sd">    :return:</span>
+<span class="sd">    :param lista_de_veiculos:</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="n">imprime_lista</span><span class="p">(</span><span class="n">cabecalho</span><span class="o">=</span><span class="s2">&quot;Lista de Veiculos&quot;</span><span class="p">,</span> <span class="n">lista</span><span class="o">=</span><span class="n">lista_de_veiculos</span><span class="p">)</span>
     <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ficheiro vazio&quot;</span><span class="p">)</span>
         <span class="k">pass</span></div>
-
 </pre></div>
 
            </div>

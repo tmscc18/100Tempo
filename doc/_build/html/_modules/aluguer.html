@@ -177,8 +177,14 @@
 
 <div class="viewcode-block" id="cria_aluguer"><a class="viewcode-back" href="../aluguer.html#aluguer.cria_aluguer">[docs]</a><span class="k">def</span> <span class="nf">cria_aluguer</span><span class="p">():</span>
     <span class="sd">&quot;&quot;&quot; </span>
-<span class="sd">    Pede ao utilizador para introduzir um novo aluguer mas tem que haver obrigatoriamente uma trotinete e um utilizador antes criado</span>
-<span class="sd">    :return: dicionario com uma trotineta na forma, {&quot;nif&quot;: nif_cliente, &quot;serie_trotinete&quot;: num_serie_troti, &quot;data_hora&quot;: hora_data, &quot;estado&quot;: estado_troti}</span>
+<span class="sd">    Pede ao utilizador para introduzir um novo aluguer mas tem que haver </span>
+<span class="sd">    obrigatoriamente uma trotinete e um utilizador antes criado</span>
+
+<span class="sd">    :return: dicionario com uma trotineta na forma, \</span>
+<span class="sd">    {&quot;nif&quot;: nif_cliente, \</span>
+<span class="sd">    &quot;serie_trotinete&quot;: num_serie_troti, \</span>
+<span class="sd">    &quot;data_hora&quot;: hora_data, \</span>
+<span class="sd">    &quot;estado&quot;: estado_troti}</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
         <span class="k">try</span><span class="p">:</span>
@@ -205,14 +211,16 @@
 
 <div class="viewcode-block" id="imprime_lista_de_aluguer"><a class="viewcode-back" href="../aluguer.html#aluguer.imprime_lista_de_aluguer">[docs]</a><span class="k">def</span> <span class="nf">imprime_lista_de_aluguer</span><span class="p">(</span><span class="n">lista_de_aluguer</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    :Obtem a lista guardada no ficheiro e imprime essa lista</span>
+<span class="sd">    Obtem a lista guardada no ficheiro e imprime essa lista</span>
+<span class="sd">    </span>
+<span class="sd">    :return:</span>
+<span class="sd">    :param lista_de_utilizadores:</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="n">imprime_lista</span><span class="p">(</span><span class="n">cabecalho</span><span class="o">=</span><span class="s2">&quot;Lista de Alugueres&quot;</span><span class="p">,</span> <span class="n">lista</span><span class="o">=</span><span class="n">lista_de_aluguer</span><span class="p">)</span>
     <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ficheiro vazio&quot;</span><span class="p">)</span>
         <span class="k">pass</span></div>
-
 </pre></div>
 
            </div>

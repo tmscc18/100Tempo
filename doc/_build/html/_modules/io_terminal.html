@@ -174,11 +174,16 @@
 
 
 <div class="viewcode-block" id="imprime_lista"><a class="viewcode-back" href="../io_terminal.html#io_terminal.imprime_lista">[docs]</a><span class="k">def</span> <span class="nf">imprime_lista</span><span class="p">(</span><span class="n">cabecalho</span><span class="p">,</span> <span class="n">lista</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; Imprime a :attr:`lista` na forma de uma tabela com um cabeçalho</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Imprime a :attr:`lista` na forma de uma tabela com um cabeçalho</span>
 
-<span class="sd">    Recebe uma lista na forma [{&quot;atrib1&quot;: valor 1, &quot;atrib2&quot;: valor 2, ...},</span>
-<span class="sd">    {&quot;atrib1&quot;: valor 1, &quot;atrib2&quot;: valor 2, ...}, ...] e imprime no terminal uma tabela</span>
-<span class="sd">    na forma</span>
+<span class="sd">    Recebe uma lista na forma </span>
+<span class="sd">    [\</span>
+<span class="sd">    {&quot;atrib1&quot;: valor 1, &quot;atrib2&quot;: valor 2, ...}, \</span>
+<span class="sd">    {&quot;atrib1&quot;: valor 1, &quot;atrib2&quot;: valor 2, ...}, </span>
+<span class="sd">    ...</span>
+<span class="sd">    ]</span>
+<span class="sd">    e imprime no terminal uma tabela na forma</span>
 
 <span class="sd">    ==  ======  ======</span>
 <span class="sd">    id  atrib1  atrib2</span>
@@ -190,7 +195,6 @@
 <span class="sd">    :param cabecalho: cabecalho para a listagem</span>
 <span class="sd">    :param lista: lista a ser impressa</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-
     <span class="n">cabecalho</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;:::::::::::::::::: </span><span class="si">{</span><span class="n">cabecalho</span><span class="si">}</span><span class="s2"> ::::::::::::::::::&quot;</span>
     <span class="n">comprimento_cabecalho</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">cabecalho</span><span class="p">)</span>
 
@@ -201,6 +205,8 @@
 
 <div class="viewcode-block" id="imprime_lista_de_dicionarios"><a class="viewcode-back" href="../io_terminal.html#io_terminal.imprime_lista_de_dicionarios">[docs]</a><span class="k">def</span> <span class="nf">imprime_lista_de_dicionarios</span><span class="p">(</span><span class="n">lista</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Obtem a lista guardada no ficheiro e imprime essa lista</span>
+
 <span class="sd">    :param lista: Lista</span>
 <span class="sd">    :param Print: Imprime a lista adequadamente indicada anteriormente, por meio do menu</span>
 <span class="sd">    &quot;&quot;&quot;</span>

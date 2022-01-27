@@ -2,11 +2,16 @@ from tabulate import tabulate
 
 
 def imprime_lista(cabecalho, lista):
-    """ Imprime a :attr:`lista` na forma de uma tabela com um cabeçalho
+    """
+    Imprime a :attr:`lista` na forma de uma tabela com um cabeçalho
 
-    Recebe uma lista na forma [{"atrib1": valor 1, "atrib2": valor 2, ...},
-    {"atrib1": valor 1, "atrib2": valor 2, ...}, ...] e imprime no terminal uma tabela
-    na forma
+    Recebe uma lista na forma 
+    [\
+    {"atrib1": valor 1, "atrib2": valor 2, ...}, \
+    {"atrib1": valor 1, "atrib2": valor 2, ...}, 
+    ...
+    ]
+    e imprime no terminal uma tabela na forma
 
     ==  ======  ======
     id  atrib1  atrib2
@@ -18,7 +23,6 @@ def imprime_lista(cabecalho, lista):
     :param cabecalho: cabecalho para a listagem
     :param lista: lista a ser impressa
     """
-
     cabecalho = f":::::::::::::::::: {cabecalho} ::::::::::::::::::"
     comprimento_cabecalho = len(cabecalho)
 
@@ -29,6 +33,8 @@ def imprime_lista(cabecalho, lista):
 
 def imprime_lista_de_dicionarios(lista):
     """
+    Obtem a lista guardada no ficheiro e imprime essa lista
+
     :param lista: Lista
     :param Print: Imprime a lista adequadamente indicada anteriormente, por meio do menu
     """

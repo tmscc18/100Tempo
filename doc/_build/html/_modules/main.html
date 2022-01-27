@@ -170,8 +170,7 @@
            <div itemprop="articleBody">
             
   <h1>Source code for main</h1><div class="highlight"><pre>
-<span></span>
-<span class="kn">from</span> <span class="nn">trotinetas</span> <span class="kn">import</span> <span class="p">(</span>
+<span></span><span class="kn">from</span> <span class="nn">trotinetas</span> <span class="kn">import</span> <span class="p">(</span>
     <span class="n">cria_trotineta</span><span class="p">,</span>
     <span class="n">imprime_lista_de_trotinetas</span><span class="p">,</span>
     <span class="n">nome_ficheiro_lista_de_trotinetas</span>
@@ -203,16 +202,16 @@
 <span class="kn">import</span> <span class="nn">time</span>
 
 <div class="viewcode-block" id="menu"><a class="viewcode-back" href="../main.html#main.menu">[docs]</a><span class="k">def</span> <span class="nf">menu</span><span class="p">():</span>
-
     <span class="n">lista_de_trotinetas</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">lista_de_utilizadores</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">lista_de_compras</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">lista_de_aluguer</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">lista_de_report</span> <span class="o">=</span> <span class="p">[]</span>
 
-
     <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; main menu da aplicação - Direciona aos locais adequados consuante a escolha&quot;&quot;&quot;</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Main menu da aplicação - Direciona aos locais adequados consuante a escolha</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">        *********************************************************************</span>
 <span class="s2">        :                   A trote - aluguer de trotinetas                 :</span>
@@ -272,8 +271,6 @@
         <span class="k">elif</span> <span class="n">op</span> <span class="o">==</span> <span class="s2">&quot;rl&quot;</span><span class="p">:</span>
             <span class="n">imprime_lista_de_report</span><span class="p">(</span><span class="n">lista_de_report</span><span class="p">)</span></div>
 
-
-
 <div class="viewcode-block" id="pergunta_id"><a class="viewcode-back" href="../main.html#main.pergunta_id">[docs]</a><span class="k">def</span> <span class="nf">pergunta_id</span><span class="p">(</span><span class="n">questao</span><span class="p">,</span> <span class="n">lista</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    :param questao: &quot;Qual o seu id de cliente?&quot;</span>
@@ -300,14 +297,14 @@
                 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;id inexistente. Tente de novo. Valores admitidos </span><span class="si">{</span><span class="mi">0</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="carrega_as_listas_dos_ficheiros"><a class="viewcode-back" href="../main.html#main.carrega_as_listas_dos_ficheiros">[docs]</a><span class="k">def</span> <span class="nf">carrega_as_listas_dos_ficheiros</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot; Carrega as listas dos ficheiros para uma lista que vai guardar num ficheiro adequado&quot;&quot;&quot;</span>
-
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Carrega as listas dos ficheiros para uma lista que vai guardar num ficheiro adequado</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">lista_de_veiculos</span> <span class="o">=</span> <span class="n">le_de_ficheiro</span><span class="p">(</span><span class="n">nome_ficheiro_lista_de_trotinetas</span><span class="p">)</span>
     <span class="n">lista_de_utilizadores</span> <span class="o">=</span> <span class="n">le_de_ficheiro</span><span class="p">(</span><span class="n">nome_ficheiro_lista_de_utilizadores</span><span class="p">)</span>
     <span class="n">lista_de_aluguer</span> <span class="o">=</span> <span class="n">le_de_ficheiro</span><span class="p">(</span><span class="n">nome_ficheiro_lista_de_aluguer</span><span class="p">)</span>
     <span class="n">lista_de_report</span> <span class="o">=</span> <span class="n">le_de_ficheiro</span><span class="p">(</span><span class="n">nome_ficheiro_lista_de_report</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">lista_de_veiculos</span><span class="p">,</span> <span class="n">lista_de_utilizadores</span><span class="p">,</span> <span class="n">lista_de_aluguer</span><span class="p">,</span> <span class="n">lista_de_report</span></div>
-
 
 <div class="viewcode-block" id="guarda_as_listas_em_ficheiros"><a class="viewcode-back" href="../main.html#main.guarda_as_listas_em_ficheiros">[docs]</a><span class="k">def</span> <span class="nf">guarda_as_listas_em_ficheiros</span><span class="p">(</span><span class="n">lista_de_veiculos</span><span class="p">,</span> <span class="n">lista_de_utilizadores</span><span class="p">,</span> <span class="n">lista_de_aluguer</span><span class="p">,</span> <span class="n">lista_de_report</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
@@ -315,8 +312,7 @@
 <span class="sd">    :param lista_de_veiculos: lista_de_veiculos</span>
 <span class="sd">    :return: Guarda as listas nos ficheiros apropriados</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-
-    <span class="n">op</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Os dados nos ficheiros serão sobrepostos. Continuar (S/n)? &quot;</span><span class="p">)</span>
+    <span class="n">op</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Os dados nos ficheiros serão sobrepostos. Continuar (s/n)? &quot;</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">op</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="s1">&#39;S&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">]:</span>
         <span class="n">guarda_em_ficheiro</span><span class="p">(</span><span class="n">nome_ficheiro_lista_de_trotinetas</span><span class="p">,</span> <span class="n">lista_de_veiculos</span><span class="p">)</span>
         <span class="n">guarda_em_ficheiro</span><span class="p">(</span><span class="n">nome_ficheiro_lista_de_utilizadores</span><span class="p">,</span> <span class="n">lista_de_utilizadores</span><span class="p">)</span>
@@ -324,7 +320,6 @@
         <span class="n">guarda_em_ficheiro</span><span class="p">(</span><span class="n">nome_ficheiro_lista_de_report</span><span class="p">,</span> <span class="n">lista_de_report</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cancelada.&quot;</span><span class="p">)</span></div>
-
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
     <span class="n">menu</span><span class="p">()</span>

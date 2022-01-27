@@ -1,4 +1,3 @@
-
 from trotinetas import (
     cria_trotineta,
     imprime_lista_de_trotinetas,
@@ -31,16 +30,16 @@ from io_terminal import (
 import time
 
 def menu():
-
     lista_de_trotinetas = []
     lista_de_utilizadores = []
     lista_de_compras = []
     lista_de_aluguer = []
     lista_de_report = []
 
-
     while True:
-        """ main menu da aplicação - Direciona aos locais adequados consuante a escolha"""
+        """
+        Main menu da aplicação - Direciona aos locais adequados consuante a escolha
+        """
         print("""
         *********************************************************************
         :                   A trote - aluguer de trotinetas                 :
@@ -100,8 +99,6 @@ def menu():
         elif op == "rl":
             imprime_lista_de_report(lista_de_report)
 
-
-
 def pergunta_id(questao, lista, show=1):
     """
     :param questao: "Qual o seu id de cliente?"
@@ -128,14 +125,14 @@ def pergunta_id(questao, lista, show=1):
                 print(f"id inexistente. Tente de novo. Valores admitidos {0} - {len(lista)}")
 
 def carrega_as_listas_dos_ficheiros():
-    """ Carrega as listas dos ficheiros para uma lista que vai guardar num ficheiro adequado"""
-
+    """
+    Carrega as listas dos ficheiros para uma lista que vai guardar num ficheiro adequado
+    """
     lista_de_veiculos = le_de_ficheiro(nome_ficheiro_lista_de_trotinetas)
     lista_de_utilizadores = le_de_ficheiro(nome_ficheiro_lista_de_utilizadores)
     lista_de_aluguer = le_de_ficheiro(nome_ficheiro_lista_de_aluguer)
     lista_de_report = le_de_ficheiro(nome_ficheiro_lista_de_report)
     return lista_de_veiculos, lista_de_utilizadores, lista_de_aluguer, lista_de_report
-
 
 def guarda_as_listas_em_ficheiros(lista_de_veiculos, lista_de_utilizadores, lista_de_aluguer, lista_de_report):
     """
@@ -143,8 +140,7 @@ def guarda_as_listas_em_ficheiros(lista_de_veiculos, lista_de_utilizadores, list
     :param lista_de_veiculos: lista_de_veiculos
     :return: Guarda as listas nos ficheiros apropriados
     """
-
-    op = input("Os dados nos ficheiros serão sobrepostos. Continuar (S/n)? ")
+    op = input("Os dados nos ficheiros serão sobrepostos. Continuar (s/n)? ")
     if op in ['s', 'S', '']:
         guarda_em_ficheiro(nome_ficheiro_lista_de_trotinetas, lista_de_veiculos)
         guarda_em_ficheiro(nome_ficheiro_lista_de_utilizadores, lista_de_utilizadores)
@@ -152,7 +148,6 @@ def guarda_as_listas_em_ficheiros(lista_de_veiculos, lista_de_utilizadores, list
         guarda_em_ficheiro(nome_ficheiro_lista_de_report, lista_de_report)
     else:
         print("Cancelada.")
-
 
 if __name__ == "__main__":
     menu()

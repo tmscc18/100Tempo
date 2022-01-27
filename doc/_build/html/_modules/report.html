@@ -177,7 +177,10 @@
 <div class="viewcode-block" id="cria_report"><a class="viewcode-back" href="../report.html#report.cria_report">[docs]</a><span class="k">def</span> <span class="nf">cria_report</span><span class="p">(</span><span class="n">clientid</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Pede ao utilizador para introduzir um novo reporte mas tem que haver obrigatoriamente um utilizador antes criado</span>
-<span class="sd">    :return: dicionario com um reporte na forma, {&quot;clientid&quot;: clientid, &quot;tipo&quot;: tipo, &quot;story&quot;: story}</span>
+<span class="sd">    :return: dicionario com um reporte na forma, \</span>
+<span class="sd">    {&quot;clientid&quot;: clientid, \</span>
+<span class="sd">    &quot;tipo&quot;: tipo, \</span>
+<span class="sd">    &quot;story&quot;: story}</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
         <span class="k">try</span><span class="p">:</span>
@@ -192,7 +195,10 @@
 
 <div class="viewcode-block" id="imprime_lista_de_report"><a class="viewcode-back" href="../report.html#report.imprime_lista_de_report">[docs]</a><span class="k">def</span> <span class="nf">imprime_lista_de_report</span><span class="p">(</span><span class="n">lista_de_report</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    :Obtem a lista guardada no ficheiro e imprime essa lista</span>
+<span class="sd">    Obtem a lista guardada no ficheiro e imprime essa lista</span>
+
+<span class="sd">    :return:</span>
+<span class="sd">    :param lista_de_report:</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="n">imprime_lista</span><span class="p">(</span><span class="n">cabecalho</span><span class="o">=</span><span class="s2">&quot;Lista de Reportes&quot;</span><span class="p">,</span> <span class="n">lista</span><span class="o">=</span><span class="n">lista_de_report</span><span class="p">)</span>

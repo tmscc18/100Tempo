@@ -1,8 +1,7 @@
 import pickle
 
-
 def le_de_ficheiro(nome_ficheiro):
-    """ le os dados de um ficheiro
+    """
     :param nome_ficheiro: nome do ficheiro onde estao os dados
     :return: o que leu do ficheiro (depende dos dados guardados)
     """
@@ -14,7 +13,9 @@ def le_de_ficheiro(nome_ficheiro):
         pass
 
 def guarda_em_ficheiro(nome_do_ficheiro, dados):
-    """ guarda os dados recebidos num ficheiro
+    """
+    Obtem a lista guardada no ficheiro e imprime essa lista
+
     :param nome_do_ficheiro: nome do ficheiro onde vai guardar os dados
     :param dados: dados a serem guardados
     """
