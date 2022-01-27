@@ -6,8 +6,7 @@ nome_ficheiro_lista_de_trotinetas = "lista_de_trotinetas.pk"
 def cria_trotineta():
     """
     Pede ao utilizador para introduzir uma nova trotineta
-    :return: dicionario com uma trotineta na forma 
-    {"marca": <<marca>>, "modelo": <<modelo>>, ... COMPLETAR ...}
+    :return: dicionario com uma trotineta na forma, {"marca": marca, "matricula": modelo}
     """
     while True:
         try:

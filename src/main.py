@@ -40,7 +40,7 @@ def menu():
 
 
     while True:
-        """ main menu da aplicação"""
+        """ main menu da aplicação - Direciona aos locais adequados consuante a escolha"""
         print("""
         *********************************************************************
         :                   A trote - aluguer de trotinetas                 :
@@ -104,11 +104,11 @@ def menu():
 
 def pergunta_id(questao, lista, show=1):
     """
-    :param questao:
-    :param lista:
-    :return:
+    :param questao: "Qual o seu id de cliente?"
+    :param lista: lista_de_utilizadores
+    :return: idx (tabela)
 
-    :verificação da existencia de valores pre-existentes
+    :verificação da existencia de valores pre-existentes noutra lista
     """
     if show == 1:
         imprime_lista_de_dicionarios(lista)
@@ -128,7 +128,7 @@ def pergunta_id(questao, lista, show=1):
                 print(f"id inexistente. Tente de novo. Valores admitidos {0} - {len(lista)}")
 
 def carrega_as_listas_dos_ficheiros():
-    """ Carrega as listas dos ficheiros para uma lista/variavel """
+    """ Carrega as listas dos ficheiros para uma lista que vai guardar num ficheiro adequado"""
 
     lista_de_veiculos = le_de_ficheiro(nome_ficheiro_lista_de_trotinetas)
     lista_de_utilizadores = le_de_ficheiro(nome_ficheiro_lista_de_utilizadores)
@@ -139,9 +139,9 @@ def carrega_as_listas_dos_ficheiros():
 
 def guarda_as_listas_em_ficheiros(lista_de_veiculos, lista_de_utilizadores, lista_de_aluguer, lista_de_report):
     """
-    :param lista_de_utilizadores:
-    :param lista_de_veiculos:
-    :return:
+    :param lista_de_utilizadores: lista_de_utilizadores
+    :param lista_de_veiculos: lista_de_veiculos
+    :return: Guarda as listas nos ficheiros apropriados
     """
 
     op = input("Os dados nos ficheiros serão sobrepostos. Continuar (S/n)? ")

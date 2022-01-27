@@ -29,9 +29,8 @@ def imprime_lista(cabecalho, lista):
 
 def imprime_lista_de_dicionarios(lista):
     """
-    .... todo ....
-    :param lista:
-    :return:
+    :param lista: Lista
+    :param Print: Imprime a lista adequadamente indicada anteriormente, por meio do menu
     """
     if len(lista) > 0:
         # cabecalho da tabela

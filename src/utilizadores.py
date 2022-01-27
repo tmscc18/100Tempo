@@ -6,7 +6,7 @@ def cria_novo_utilizador():
     """
     Pede os dados de um novo utilizador
 
-    :return: dicionario com o novo utilizador, {"nome": <<nome>>, "email": <<email>>}
+    :return: dicionario com o novo utilizador, {"nome": nome, "email": email, "telemovel": telemovel, "password": password}
     """
     while True:
         try:
@@ -23,7 +23,9 @@ def cria_novo_utilizador():
 
 
 def imprime_lista_de_utilizadores(lista_de_utilizadores):
-    """ ..."""
+    """
+    :Obtem a lista guardada no ficheiro e imprime essa lista
+    """
     try:
         imprime_lista(cabecalho="Lista de Utilizadores", lista=lista_de_utilizadores)
     except TypeError:
