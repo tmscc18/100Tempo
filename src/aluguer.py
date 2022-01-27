@@ -3,11 +3,11 @@ from io_terminal import imprime_lista
 
 nome_ficheiro_lista_de_aluguer = "lista_de_aluguer.pk"
 
-
 def cria_aluguer():
-    """ Pede ao utilizador para introduzir uma nova trotineta
-    :return: dicionario com uma trotineta na forma
-        {"marca": <<marca>>, "modelo": <<modelo>>, ... COMPLETAR ...}
+    """ 
+    Pede ao utilizador para introduzir uma nova trotineta
+    :return: dicionario com uma trotineta na forma 
+    {"marca": <<marca>>, "modelo": <<modelo>>, ... COMPLETAR ...}
     """
     while True:
         try:
@@ -33,7 +33,10 @@ def cria_aluguer():
             continue
 
 def imprime_lista_de_aluguer(lista_de_aluguer):
-    """ ..."""
+    """
+    ...
+    
+    """
     try:
         imprime_lista(cabecalho="Lista de Alugueres", lista=lista_de_aluguer)
     except TypeError:

@@ -1,13 +1,13 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="pt" >
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>io_terminal module &mdash; Documentação Trotinetas! 0.1</title>
+  <title>io_terminal module &mdash; 100Tempo 0.1 documentation</title>
   
 
   
@@ -37,13 +37,12 @@
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/translations.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
-    <link rel="index" title="Índice" href="genindex.html" />
-    <link rel="search" title="Pesquisar" href="search.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="main module" href="main.html" />
     <link rel="prev" title="io_ficheiros module" href="io_ficheiros.html" /> 
 </head>
@@ -59,7 +58,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home"> Trotinetas!
+            <a href="index.html" class="icon icon-home"> 100Tempo
           
 
           
@@ -100,6 +99,7 @@
 <li class="toctree-l1"><a class="reference internal" href="io_ficheiros.html">io_ficheiros module</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">io_terminal module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="main.html">main module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="report.html">report module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="trotinetas.html">trotinetas module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="utilizadores.html">utilizadores module</a></li>
 </ul>
@@ -117,7 +117,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">Trotinetas!</a>
+          <a href="index.html">100Tempo</a>
         
       </nav>
 
@@ -173,8 +173,56 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="io-terminal-module">
-<h1>io_terminal module<a class="headerlink" href="#io-terminal-module" title="Link permanente para este título">¶</a></h1>
+  <div class="section" id="module-io_terminal">
+<span id="io-terminal-module"></span><h1>io_terminal module<a class="headerlink" href="#module-io_terminal" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="io_terminal.imprime_lista">
+<span class="sig-prename descclassname"><span class="pre">io_terminal.</span></span><span class="sig-name descname"><span class="pre">imprime_lista</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cabecalho</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lista</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/io_terminal.html#imprime_lista"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#io_terminal.imprime_lista" title="Permalink to this definition">¶</a></dt>
+<dd><p>Imprime a <code class="xref py py-attr docutils literal notranslate"><span class="pre">lista</span></code> na forma de uma tabela com um cabeçalho</p>
+<p>Recebe uma lista na forma [{“atrib1”: valor 1, “atrib2”: valor 2, …},
+{“atrib1”: valor 1, “atrib2”: valor 2, …}, …] e imprime no terminal uma tabela
+na forma</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 43%" />
+<col style="width: 43%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>id</p></th>
+<th class="head"><p>atrib1</p></th>
+<th class="head"><p>atrib2</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>valor1</p></td>
+<td><p>valor2</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>…</p></td>
+<td><p>…</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cabecalho</strong> – cabecalho para a listagem</p></li>
+<li><p><strong>lista</strong> – lista a ser impressa</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="io_terminal.imprime_lista_de_dicionarios">
+<span class="sig-prename descclassname"><span class="pre">io_terminal.</span></span><span class="sig-name descname"><span class="pre">imprime_lista_de_dicionarios</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lista</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/io_terminal.html#imprime_lista_de_dicionarios"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#io_terminal.imprime_lista_de_dicionarios" title="Permalink to this definition">¶</a></dt>
+<dd><p>…. todo ….
+:param lista:
+:return:</p>
+</dd></dl>
+
 </div>
 
 
@@ -191,7 +239,7 @@
 
   <div role="contentinfo">
     <p>
-        &#169; Copyright 2021, authors.
+        &#169; Copyright 2022, 100Tempo.
 
     </p>
   </div>

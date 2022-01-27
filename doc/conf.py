@@ -12,14 +12,14 @@
 #
 import os
 import sys
+sys.path.insert(0, 'D:\\OneDrive - Universidade do Algarve\\ADC\\git\\100Tempo\\src')
 
-sys.path.insert(0, os.path.abspath('./../src'))
 
 # -- Project information -----------------------------------------------------
 
-project = 'Trotinetas!'
-copyright = '2021, authors'
-author = 'authors'
+project = '100Tempo'
+copyright = '2022, 100Tempo'
+author = '100Tempo'
 
 # The short X.Y version
 version = '0'
@@ -50,7 +50,7 @@ templates_path = ['_templates']
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = 'pt'
+language = 'en'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.

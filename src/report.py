@@ -2,7 +2,6 @@ from io_terminal import imprime_lista
 
 nome_ficheiro_lista_de_report = "lista_de_report.pk"
 
-
 def cria_report(clientid):
     while True:
         try:
@@ -16,7 +15,9 @@ def cria_report(clientid):
 
 
 def imprime_lista_de_report(lista_de_report):
-     """ ..."""
+     """
+     ...
+     """
      try:
          imprime_lista(cabecalho="Lista de Reportes", lista=lista_de_report)
      except TypeError:

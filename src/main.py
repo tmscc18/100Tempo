@@ -43,7 +43,7 @@ def menu():
     while True:
         print("""
         *********************************************************************
-        :                   A trote - aluguer de trotinetas                 : 
+        :                   A trote - aluguer de trotinetas                 :
         *********************************************************************
         :                                                                   :
         : tn - nova trotineta       tl - lista veiculos                     :
