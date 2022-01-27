@@ -31,7 +31,6 @@ from io_terminal import (
 import time
 
 def menu():
-    """ main menu da aplicação"""
 
     lista_de_trotinetas = []
     lista_de_utilizadores = []
@@ -41,6 +40,7 @@ def menu():
 
 
     while True:
+        """ main menu da aplicação"""
         print("""
         *********************************************************************
         :                   A trote - aluguer de trotinetas                 :
@@ -97,20 +97,18 @@ def menu():
             else:
                 print("Erro: tem de ter utilizadores")
 
-
-
-
         elif op == "rl":
             imprime_lista_de_report(lista_de_report)
 
 
 
 def pergunta_id(questao, lista, show=1):
-    """ ... ??to do??
-
+    """
     :param questao:
     :param lista:
     :return:
+
+    :verificação da existencia de valores pre-existentes
     """
     if show == 1:
         imprime_lista_de_dicionarios(lista)
@@ -130,7 +128,7 @@ def pergunta_id(questao, lista, show=1):
                 print(f"id inexistente. Tente de novo. Valores admitidos {0} - {len(lista)}")
 
 def carrega_as_listas_dos_ficheiros():
-    """ ...todo... """
+    """ Carrega as listas dos ficheiros para uma lista/variavel """
 
     lista_de_veiculos = le_de_ficheiro(nome_ficheiro_lista_de_trotinetas)
     lista_de_utilizadores = le_de_ficheiro(nome_ficheiro_lista_de_utilizadores)
@@ -140,8 +138,7 @@ def carrega_as_listas_dos_ficheiros():
 
 
 def guarda_as_listas_em_ficheiros(lista_de_veiculos, lista_de_utilizadores, lista_de_aluguer, lista_de_report):
-    """ ... todo ....
-
+    """
     :param lista_de_utilizadores:
     :param lista_de_veiculos:
     :return:

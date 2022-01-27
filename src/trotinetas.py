@@ -24,7 +24,7 @@ def cria_trotineta():
 
 def imprime_lista_de_trotinetas(lista_de_veiculos):
     """
-    ...
+    :Obtem a lista guardada no ficheiro e imprime essa lista
     """
     try:
         imprime_lista(cabecalho="Lista de Veiculos", lista=lista_de_veiculos)
