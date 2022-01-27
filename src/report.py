@@ -22,4 +22,3 @@ def imprime_lista_de_report(lista_de_report):
      except TypeError:
          print("Ficheiro vazio")
          pass
-
