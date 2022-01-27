@@ -25,6 +25,8 @@ def cria_novo_utilizador():
 def imprime_lista_de_utilizadores(lista_de_utilizadores):
     """
     :Obtem a lista guardada no ficheiro e imprime essa lista
+    :return:
+    :param lista_de_utilizadores:
     """
     try:
         imprime_lista(cabecalho="Lista de Utilizadores", lista=lista_de_utilizadores)
